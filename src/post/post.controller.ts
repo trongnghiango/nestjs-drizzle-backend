@@ -6,10 +6,12 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { PostService } from './post.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
+import { QueryPostDto } from './dto/query-post.dto';
 
 @Controller('post')
 export class PostController {
@@ -17,16 +19,28 @@ export class PostController {
 
   @Post()
   create(@Body() createPostDto: CreatePostDto) {
+    console.log(createPostDto);
     return this.postService.create(createPostDto);
   }
 
+  @Get('inventory')
+  getInventory() {
+    return this.postService.getInventory();
+  }
+
+  @Get('warranty')
+  historyWarranty() {
+    return this.postService.getWarrantyHistory();
+  }
+
   @Get()
-  findAll() {
-    return this.postService.findAll();
+  findAll(@Query() queryPostDto: QueryPostDto) {
+    return this.postService.find(queryPostDto);
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
+    console.log(id);
     return this.postService.findOne(+id);
   }
 

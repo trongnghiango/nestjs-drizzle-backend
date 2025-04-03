@@ -5,29 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1741757587143,
-      "tag": "0000_freezing_thena",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1741758068390,
-      "tag": "0001_woozy_flatman",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1741761962688,
-      "tag": "0002_lively_silver_sable",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1741763916730,
-      "tag": "0003_eager_scarecrow",
+      "when": 1743675472741,
+      "tag": "0000_whole_maximus",
       "breakpoints": true
     }
   ]
